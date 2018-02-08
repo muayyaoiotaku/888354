@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX 2</title>
+
+<script type="text/javascript">
+	function myFunction() {
+		var text1 = document.getElementById("txta").value;
+		var textp = text1.value.split(" ");
+		var text2 = document.getElementById("txt").value;
+		 // var caseY = document.getElementById("Y");
+		 // var caseN = document.getElementById("N");
+		var case = document.getElementsByClassName("Case");
+		var sen;
+		for(var i = 0; i < case.length; i++){
+			if(case[i].checked){
+				sen = case[i].value;
+			}
+		}
+
+		var sum = 0;
+		 $("#rel").html(sum);
+		// var txtin;
+		// var txtsch;
+		// var sum = 0;
+		// for (var i = 0; i < textp.length; i++) {
+		// 	if (sen=='n') { 
+		// 		txtin = textp[i].toLowerCase(); 
+		// 		txtsch = text2.toLowerCase(); 
+		// 	}else{
+		// 		txtin = textp[i]; 
+		// 		txtsch = text2;	
+		// 	}			
+		// 	if(txtin === txtsch){
+		// 		sum = sum+1;
+		// 	}
+		// }
+
+		// if (sen == 'y') {
+		// 	for (var i = 0; i < textp.length; i++) {
+		// 		txtin = textp[i]; 
+		// 		txtsch = text2;	
+		// 		if(txtin === txtsch){
+		// 			sum = sum+1;
+		// 		}		
+		// 	}	 
+		// }
+		// if (sen == 'n') {
+		// 	for (var i = 0; i < textp.length; i++) {
+		// 		txtin = textp[i].toLowerCase(); 
+		// 		txtsch = text2.toLowerCase();
+		// 		if(txtin === txtsch){
+		// 			sum = sum+1;
+		// 		}
+		// 	}				
+		// }
+		// var tagspan = document.getElementById("result");
+		//  $("#rel").val(sum);
+		// document.getElementById("rel").innerHTML = sum; //------------
+		// var tagspan = document.getElementById("sum");
+		// tagspan.innerHTML = sum;
+
+			
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+
+	<center><h1>Ex2 - Search String Non Sensitive Case</h1></center>
+
+	<hr>
+
+	<center>Text Input : <textarea id="txta"></textarea></center>
+	<br>
+	<br>
+
+	<center>Sensitive Case : 
+			<input type="radio" name="Case" class="Case" value="y" checked> Yes
+			<input type="radio" name="Case" class="Case" value="n"> No
+	</center>
+	<br>
+	<br>
+
+	<center>Search : <input type="Text" name="txt" id="txt"></center>
+	<br>
+	<br>
+
+	<!-- <center><input type="button" name="butt" value="Search" id="butt"></center> -->
+	<center><button onclick="myFunction()">Search</button></center>
+	<br>
+	<br>
+
+	<center>Result for Search : <a id="rel"></a></center>
+
+</body>
+</html>
