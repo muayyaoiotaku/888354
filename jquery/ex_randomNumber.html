@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex_highlight</title>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#pp").on("click", function() {
+			  // var te01 = $("#te01").val();
+			  var numm1 = Math.floor(Math.random() * 200) - 100;
+			  var numm2 = Math.floor(Math.random() * 201) - 1;
+			  
+			  $("#num1").html(numm1);
+			  $("#num1").val(numm1);
+			  $("#num2").html(numm2);
+			  $("#num2").val(numm2);
+			 });
+
+			$("#dd").on("click", function() {
+			  var n1 = $("#ans").val();
+			  // var sum = $("#num1").val() + $("#num2").val();
+			  var sum2 = parseInt($("#num1").val()) +  parseInt($("#num2").val());
+
+			  $("#anss").html(sum2);
+
+			  if (n1 == sum2) {
+			  	$("#anss").html("That's correct.");
+			  	$("#anss").css("color", "green");
+			  }else{
+			  	$("#anss").html("That's wrong. The answer is  " + sum2);
+			  	$("#anss").css("color", "red");
+			  }
+
+			 });
+
+
+		});
+
+</script>
+
+</head>
+<body>
+	<center>
+		<div><h1>Ex - Random Number fir Answer</h1></div>
+		<br>
+		<hr>
+		<br>
+		<div><button id="pp" >Random Number</button></div>
+		<br>
+		<div>
+			<a id="num1" >0</a> + <a id="num2">0</a> = <input type="" name="ans" id="ans">
+		</div>
+		<br>
+		<div><button id="dd">Send Answer</button></div>
+		<br>
+		<div>Result : <a id="anss"></a></div>
+
+	</center>
+</body>
+</html>
